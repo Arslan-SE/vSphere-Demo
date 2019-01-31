@@ -7,7 +7,6 @@ variable "env" {}
 
 variable "app" { }
 
-variable "vmfolder" { }
 
 # TFE 
 variable "tfe_user_token" {}
@@ -16,6 +15,8 @@ variable "vcs_identifier" {}
 variable "base_vcs_identifier" {}
 variable "tfe_oauth_token" {}
 variable "tfe_org_token" {}
+variable "vmname" {}
+variable "vmfolder" {}
 
 # VSPHERE
 variable "VSPHERE_USER" { }
@@ -33,9 +34,13 @@ variable vmname_prefix {}
 variable "tag" { }
 variable "tagCategory" { }
 
-variable "vmdns" { }
+variable "vmdns" {
+    type = "string"
+}
 variable "vmgateway" { }
-variable "ipaddress" { }
+variable "ipaddress" {
+    type = "string"
+ }
 variable "ipv4submask" { }
 
 variable "vmtemplate" { }
