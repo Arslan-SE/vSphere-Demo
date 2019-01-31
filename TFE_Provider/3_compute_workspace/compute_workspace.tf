@@ -146,6 +146,7 @@ resource "tfe_variable" "tagCategory" {
 resource "tfe_variable" "vmdns" {
   key      = "vmdns"
   value    = "${var.vmdns}"
+  hcl     = true
   category = "terraform"
   workspace_id = "${tfe_workspace.compute.id}"
 }
@@ -160,6 +161,7 @@ resource "tfe_variable" "ipaddress" {
   key      = "ipaddress"
   value    = "${var.ipaddress}"
   category = "terraform"
+  hcl     = true
   workspace_id = "${tfe_workspace.compute.id}"
 }
 resource "tfe_variable" "ipv4submask" {

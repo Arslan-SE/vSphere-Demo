@@ -35,11 +35,12 @@ variable "tag" { }
 variable "tagCategory" { }
 
 variable "vmdns" {
+    type = "list"
 
 }
 variable "vmgateway" { }
 variable "ipaddress" {
-//    type = "string"
+   type = "list"
   
  }
 variable "ipv4submask" { }
