@@ -174,6 +174,19 @@ resource "tfe_variable" "ram_size" {
   category = "terraform"
   workspace_id = "${tfe_workspace.compute.id}"
 }
+resource "tfe_variable" "vmname" {
+  key      = "vmname"
+  value    = "${var.vmname}"
+  category = "terraform"
+  workspace_id = "${tfe_workspace.compute.id}"
+}
+
+resource "tfe_variable" "vmfolder" {
+  key      = "vmfolder"
+  value    = "${var.vmfolder}"
+  category = "terraform"
+  workspace_id = "${tfe_workspace.compute.id}"
+}
 resource "tfe_variable" "cpu_number" {
   key      = "cpu_number"
   value    = "${var.cpu_number}"
